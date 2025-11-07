@@ -208,7 +208,8 @@ export const useWatch = (animeId, initialEpisodeId) => {
       isStreamFetchInProgress.current
     )
       return;
-    const iframeServers = ["hd-1", "hd-4", "vidstreaming", "vidcloud", "douvideo"];
+    const iframeServers = [];
+    // const iframeServers = ["hd-1", "hd-4", "vidstreaming", "vidcloud", "douvideo"];
 
     if (iframeServers.includes(activeServerName?.toLowerCase()) && !serverLoading) {
       setBuffering(false);
